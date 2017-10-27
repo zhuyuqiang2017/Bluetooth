@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="bluetooth_switch" type="id"/>
+    <item name="bluetooth_discovery" type="id" />
+    <item name="bluetooth_edit" type="id" />
+    <item name="bluetooth_send" type="id" />
+    <item name="bluetooth_list" type="id"/>
+    <item name="bluetooth_message" type="id"/>
+
+    <item name="list_item_name" type="id" />
+    <item name="list_item_address" type="id" />
+</resources>

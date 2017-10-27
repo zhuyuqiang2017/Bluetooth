@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.bluetooth.MainActivity">
+    <Switch
+        style="@style/view_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bluetooth"
+        android:textSize="@dimen/text_size"
+        android:id="@id/bluetooth_switch"/>
+
+    <Button
+        style="@style/view_padding"
+        android:id="@id/bluetooth_discovery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start discovery"/>
+
+    <LinearLayout
+        style="@style/view_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <EditText
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@id/bluetooth_edit"/>
+        <Button
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@id/bluetooth_send"
+            android:text="Send"/>
+    </LinearLayout>
+    <TextView
+        style="@style/view_padding"
+        android:textColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@id/bluetooth_message"
+        android:textAllCaps="false"/>
+    <ListView
+        style="@style/view_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@id/bluetooth_list"/>
+</LinearLayout>
