@@ -155,6 +155,11 @@ public class BluetoothService {
                     connected = true;
                 }
                 i++;
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }while(connected && i<10);
             connected(mClientSocket);
         }
@@ -184,9 +189,12 @@ public class BluetoothService {
             int bytes;
             while (true) {
                 try {
-                    bytes = mIn.read(buffer);
+                    StringBuffer sb = new StringBuffer();
+                    while((bytes = mIn.read(buffer)) != -1){
+                        sb.append(new String(buffer,0,bytes));
+                    }
                     Bundle data = new Bundle();
-                    data.putString("bluetooth_message",new String(buffer,0,bytes));
+                    data.putString("bluetooth_message",sb.toString());
                     Message m = Message.obtain();
                     m.setData(data);
                     m.what = MainActivity.UPDATE_BLUETOOTH_MESSAGE;
